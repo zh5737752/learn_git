@@ -3,3 +3,4 @@ Git is a free software distrbuted under thr GPL
 Git has a mutable index called stage
 Git tracks change of files
 
+MY boss is stupied
