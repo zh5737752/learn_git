@@ -11,6 +11,8 @@
 
    `$ git add readme.txt`
 
+   **注意**：要先ctrl+s保存后才能提交！
+
 2. 用命令`git commit`告诉Git，把文件提交到仓库：  
 
    `$ git commit -m "wrote a readme file"`
@@ -99,7 +101,8 @@
 
 ### 添加远程库
 
-1. 要关联一个远程库，使用命令`git remote add origin https://github.com/zh5737752/learn_git.git`
+1. 要关联一个远程库，使用命令`git remote add origin https://github.com/zh5737752/learn_git.git`（http协议） 或 `$ git remote add origin git@github.com:zh5737752/learngit.git `  (ssh协议)
+
 
 2. 关联一个远程库时必须给远程库指定一个名字，origin是默认习惯命名；
 
@@ -108,4 +111,9 @@
 4. 此后，每次本地提交后，只要有必要，就可以使用命令`git push origin main`推送最新修改；
 
 - 删除远程库  
-  如果添加的时候地址写错了，或者就是想删除远程库，可以用`git remote rm <name>`命令。使用前，建议先用`git remote -v`查看远程库信息
+  如果添加的时候地址写错了，或者就是想删除远程库，可以用`git remote rm <name>`命令。使用前，建议先用`git remote -v`查看远程库信息  
+
+### 从远程库克隆
+
+1. 法1：在本地输入 `$ git clone https://github.com/zh5737752/gitskills` (后面那一串网址是仓库上方的网址)   （使用https协议下载）  
+   法2：在本地输入：`$ git clone git@github.com:zh5737752/gitskills.git`（账户名/文件名）   （使用ssh协议，免密、安全、不被打断）
