@@ -13,7 +13,7 @@
 
 2. 用命令`git commit`告诉Git，把文件提交到仓库：  
 
-   `$ git commit -m "wrote a readme file`
+   `$ git commit -m "wrote a readme file"`
 
 ## 时光机穿梭
 
@@ -93,3 +93,19 @@
   - 注意：提交删除 ！= 从历史记录中消失  ，可以从历史记录中恢复该文件
 
   - 想撤销删除：同 “插销修改”
+
+
+## 远程仓库  
+
+### 添加远程库
+
+1. 要关联一个远程库，使用命令`git remote add origin https://github.com/zh5737752/learn_git.git`
+
+2. 关联一个远程库时必须给远程库指定一个名字，origin是默认习惯命名；
+
+3. 关联后，使用命令`git push -u origin main`第一次推送main分支的所有内容；
+
+4. 此后，每次本地提交后，只要有必要，就可以使用命令`git push origin main`推送最新修改；
+
+- 删除远程库  
+  如果添加的时候地址写错了，或者就是想删除远程库，可以用`git remote rm <name>`命令。使用前，建议先用`git remote -v`查看远程库信息
